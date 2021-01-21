@@ -5,14 +5,13 @@
 }
 
 body {
-  background: #000;
-  color: #999;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 a {
-  color: #ccc;
+  color: black;
   text-decoration: underline;
+  font-size: 20px;
 }
 
 .info {
