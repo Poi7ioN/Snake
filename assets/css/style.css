@@ -5,18 +5,18 @@
 }
 
 body {
+  background: #000;
+  color: #999;
   font-size: 17px;
 }
 
 a {
-  color: black;
+  color: #ccc;
   text-decoration: underline;
-  font-size: 17px;
 }
 
 .info {
   width:100%;
-  height:100%;
   padding:12px;
   box-sizing: border-box;
 }
@@ -25,22 +25,25 @@ a {
 
 .webgl-wrapper {
   width: 100%;
-  height: 100%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
-  /* bring your own prefixes */
 }
 
-#unityContainer {	
+#unityContainer {
   width: 62vw; height: calc((9/16)*62vw);
+}
+
+.webgl-content * {
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .webgl-content {
   position: relative;
   width: 100%;
-  height: 100%;
   background: #ccc;
 }
 
