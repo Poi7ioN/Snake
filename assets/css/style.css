@@ -9,7 +9,7 @@ body {
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: underline;
   font-size: 17px;
 }
@@ -18,38 +18,19 @@ a {
   width:100%;
   height:100%;
   padding:12px;
-  color: white;
   box-sizing: border-box;
 }
 
 /* webgl layout */
 
 .webgl-wrapper {
-  position:fixed;
   width: 100%;
   height: 100%;
   max-width: 1000px;
-  max-height: 1000px;
   margin: 0 auto;
-  padding: 0 auto;
+  padding: 0 20px;
   box-sizing: border-box;
   /* bring your own prefixes */
-}
-
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
-}
-
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;            /* Footer height */
 }
 
 #unityContainer {	
@@ -57,14 +38,14 @@ a {
 }
 
 .webgl-content {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%;
   background: #ccc;
 }
 
 #unityContainer canvas{
-    position:fixed;
+    position:absolute;
     width:100%;
     height:100%;
     top:0;
