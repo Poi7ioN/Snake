@@ -33,16 +33,21 @@ https://github.com/sno/unity-webgl-responsive
   </head>
 
   <body>
-
-    <div class="webgl-wrapper">
-        <div class="webgl-content">
-          <div id="unityContainer""></div>
+	<div id="page-container">
+       <div id="content-wrap">
+			<div class="webgl-wrapper">
+				<div class="webgl-content">
+					<div id="unityContainer"></div>
+				</div>
+			</div>
+       </div>
+	 <footer id="footer">
+		<div class="info">
+			<p style="text-align:center"><a href="#" onclick="unityInstance.SetFullscreen(1)">click here</a> to toggle fullscreen</p>
         </div>
-    </div>
-
-    <div class="info">
-      <p style="text-align:center"><a href="#" onclick="unityInstance.SetFullscreen(1)">click here</a> to toggle fullscreen</p>
-    </div>
+	</footer>
+	</div>
+    
 
     <script src="assets/js/app.js"></script>
   </body>
