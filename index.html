@@ -92,26 +92,19 @@
   </head>
 
   <body style="margin:0; overflow:hidden">
-  <div id="touchzone">
     <div id="gameContainer"></div>
     <div id="loader">
       <img class="logo" src="logo.PNG">
       <div class="spinner" ></div>
       <div class="progress"><div class="full"></div></div>
     </div>
-  </div>
   </body>
   <link rel="stylesheet" href="assets/css/reset.css">
   <script src="Build/UnityLoader.js"></script>
   <script>
   var gameInstance = UnityLoader.instantiate("gameContainer", "Build/SnakeAndLadder.json", {onProgress: UnityProgress});
-  
-  function init() 
-  {
-  var touchzone = document.getElementById("touchzone");
-  touchzone.addEventListener("touchstart", openFullscreen);
-  } 
-  
+  window.addEventListener('mousedown',openFullscreen);
+
   function openFullscreen() 
   {
   gameInstance.SendMessage("FullScreen","SetFullScreen");
@@ -141,4 +134,3 @@
   </script>
 
 </html>
-
