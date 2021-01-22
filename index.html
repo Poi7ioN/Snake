@@ -21,19 +21,20 @@
     </script>
   </head>
 
-  <body>
+  <body style="overflow:hidden">
 
     <div class="webgl-wrapper">
         <div class="webgl-content">
-          <div id="unityContainer" style="width:960px; height: 600px;"></div>
+          <div id="unityContainer"></div>
         </div>
     </div>
 
-    <div class="info">
-      <p style="text-align:center"><a href="#" onclick="unityInstance.SetFullscreen(1)">click here</a> to toggle fullscreen</p>
-    </div>
-
+    
     <script src="assets/js/app.js"></script>
   </body>
-
+	<footer id="footer">
+	<div class="info" style="border:4px solid orange">
+      <p style="text-align:center"><a href="#" onclick="unityInstance.SetFullscreen(1)">click here</a> to toggle fullscreen</p>
+    </div>
+	</footer>
 </html>
