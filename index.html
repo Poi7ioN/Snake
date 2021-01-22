@@ -103,7 +103,7 @@
   <script src="Build/UnityLoader.js"></script>
   <script>
   var gameInstance = UnityLoader.instantiate("gameContainer", "Build/SnakeAndLadder.json", {onProgress: UnityProgress});
-  window.addEventListener('mousedown',openFullscreen);
+  window.addEventListener("touchstart",openFullscreen);
 
   function openFullscreen() 
   {
