@@ -115,6 +115,11 @@
   gameInstance.SendMessage("FullScreen","GetOrientation");
   }
   
+window.addEventListener("fullscreenchange", function() 
+{
+  openFullscreen();
+});
+  
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
