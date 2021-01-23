@@ -110,6 +110,24 @@
   gameInstance.SendMessage("FullScreen","SetFullScreen");
   }
   
+  function NotifyOrientation() 
+  {
+  gameInstance.SendMessage("FullScreen","GetOrientation");
+  }
+  
+  window.addEventListener("orientationchange", function() {                   
+    if (window.matchMedia("(orientation: portrait)").matches) 
+	{
+       alert("PORTRAIT")
+	   NotifyOrientation();
+    }
+    if (window.matchMedia("(orientation: landscape)").matches) 
+	{
+      alert("LANSCAPE")
+	  NotifyOrientation();
+    }
+}, false); 
+
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
