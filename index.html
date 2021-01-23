@@ -115,19 +115,18 @@
   gameInstance.SendMessage("FullScreen","GetOrientation");
   }
   
-  window.addEventListener("orientationchange", function() {                   
-    if (window.matchMedia("(orientation: portrait)").matches) 
-	{
-       alert("PORTRAIT")
-	   NotifyOrientation();
-    }
-    if (window.matchMedia("(orientation: landscape)").matches) 
-	{
-      alert("LANSCAPE")
-	  NotifyOrientation();
-    }
-}, false); 
+  var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
 
+if (orientation === "landscape-primary") {
+  alert("That looks good.");
+} else if (orientation === "landscape-secondary") {
+  alert("Mmmh... the screen is upside down!");
+} else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {
+  alert("Mmmh... you should rotate your device to landscape");
+} else if (orientation === undefined) {
+  alert("The orientation API isn't supported in this browser :(");
+}
+  
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
@@ -148,6 +147,7 @@
           loader.style.display = "none";
       }, 2000);
     }
+	
   }
   </script>
 
